@@ -10,9 +10,10 @@
 <body>
 
 <img src="donald_duck.png" alt="Donald Duck">
+
     <form method="post" action="register.php">
         <div>
-            <label for="email"> Adresse mail :</label>
+            <label for="email"> Adresse mail du destinataire :</label>
             <input type="email" name="email" id="email" required>
         </div>
         <div>
@@ -24,4 +25,3 @@
 
 </body>
 </html>
-
