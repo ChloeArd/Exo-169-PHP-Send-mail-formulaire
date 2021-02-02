@@ -13,7 +13,7 @@
     <form method="post" action="register.php">
         <div>
             <label for="email"> Adresse mail du destinataire :</label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email" size="30" required>
         </div>
         <div>
             <label for="message"> Message :</label>
@@ -23,6 +23,14 @@
     </form>
 
 <?php
+$email = trim($_POST["email"]);
+if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+    echo "L'email est bonne !";
+}
+elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)){
+    echo "L'email n'est pas valide !";
+}
+
 if (isset($_GET['e'])) {
     echo " Il y a eu une erreur lors de l'envoie du mail !";
 }
