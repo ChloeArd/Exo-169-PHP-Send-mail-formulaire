@@ -6,20 +6,30 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
 </head>
 <body>
 <img src="donald_duck.png" alt="Donald Duck">
 
     <form method="post" action="register.php">
-        <div>
-            <label for="email"> Adresse mail du destinataire :</label>
-            <input type="email" name="email" id="email" size="30" required>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="email">Adresse mail du destinataire :</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                    </div>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Email" aria-describedby="inputGroupPrepend2" required>
+                </div>
+            </div>
         </div>
-        <div>
-            <label for="message"> Message :</label>
-            <textarea name="message" id="message" required></textarea>
-        </div>
-        <input type="submit" value="Envoyer" name="submit">
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="message">Message : </label>
+                <textarea name="message" class="form-control" id="message" placeholder="Message" required></textarea>
+            </div>
+            <input class="btn btn-primary" type="submit" value="Envoyer" name="submit">
     </form>
 
 <?php
@@ -39,5 +49,6 @@ elseif (isset($_GET["s"])){
 }
 ?>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>
