@@ -8,7 +8,14 @@
     <title>Mail</title>
 </head>
 <body>
-
+<?php
+    if (isset($_GET['e'])) {
+        echo " Il y a eu une erreur lors de l'envoie du mail !";
+    }
+    elseif (isset($_GET["s"])){
+        echo " Le mail a été envoyé avec succés !";
+    }
+?>
 <img src="donald_duck.png" alt="Donald Duck">
 
     <form method="post" action="register.php">
